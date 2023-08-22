@@ -1,0 +1,175 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+}
+body{
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-color: linear-gradient(315deg, #ffffff, #d7e1ec);
+}
+/* CSS Code for Clock design */
+.clock{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFCE00;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px rgba(94,104,121,0.288);
+}
+.clock .center-nut{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #333;
+  z-index: 2;
+  position: absolute;
+  box-shadow: 3px 3px 5px rgba(94,104,121,0.288);
+}
+.clock .center-nut-2{
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 15;
+  position: absolute;
+}
+/* Indicator's CSS code  */
+
+.indicators div{
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  border-radius: 50%;
+  margin-left: -13px;
+  margin-top: -13px;
+  background: #000;
+  box-shadow: 3px 3px 5px rgba(94,104,121,0.288);
+}
+.indicators div:nth-child(1){
+  transform: rotate(30deg) translateY(-130px);
+}
+.indicators div:nth-child(2){
+  transform: rotate(60deg) translateY(-130px);
+}
+.indicators div:nth-child(3){
+  transform: rotate(90deg) translateY(-130px);
+  background: #12A2F3;
+}
+.indicators div:nth-child(4){
+  transform: rotate(120deg) translateY(-130px);
+}
+.indicators div:nth-child(5){
+  transform: rotate(150deg) translateY(-130px);
+}
+.indicators div:nth-child(6){
+  transform: rotate(180deg) translateY(-130px);
+  background-color: #12A2F3;
+}
+.indicators div:nth-child(7){
+  transform: rotate(210deg) translateY(-130px);
+}
+.indicators div:nth-child(8){
+  transform: rotate(240deg) translateY(-130px);
+}
+.indicators div:nth-child(9){
+  transform: rotate(270deg) translateY(-130px);
+  background-color: #12A2F3;
+}
+.indicators div:nth-child(10){
+  transform: rotate(300deg) translateY(-130px);
+}
+.indicators div:nth-child(11){
+  transform: rotate(330deg) translateY(-130px);
+}
+.indicators div:nth-child(12){
+  transform: rotate(360deg) translateY(-130px);
+  background-color: #12A2F3;
+}
+.sec-hand, .min-hand, .hr-hand{
+  position: absolute;
+}
+.sec-hand, .sec{
+  width: 180px;
+  height: 180px;
+  z-index: 6;
+}
+.min-hand, .min{
+  width: 140px;
+  height: 140px;
+  z-index: 5;
+}
+.hr-hand, .hr{
+  width: 110px;
+  height: 110px;
+  z-index: 4;
+}
+.sec, .min, .hr{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec::before{
+  position: absolute;
+  content: '';
+  height: 110px;
+  top: -20px;
+  width: 3px;
+  background: #12A2F3;
+}
+.sec::after{
+  position: absolute;
+  content: '';
+  height: 45px;
+  width: 7px;
+  background: #12A2F3;
+  top: 95px;
+  border-radius: 5px;
+}
+.min::before{
+  position: absolute;
+  content: '';
+  width: 3px;
+  top: -25px;
+  border-radius: 3px;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 100px solid #f82121;
+}
+.min::after{
+  position: absolute;
+  content: '';
+  width: 7px;
+  top: 40px;
+  border-radius: 5px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 80px solid #f82121;
+}
+.hr::before{
+  position: absolute;
+  content: '';
+  width: 2px;
+  top: -20px;
+  border-radius: 1px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 70px solid #000;
+}
+.hr::after{
+  position: absolute;
+  content: '';
+  width: 6px;
+  top: 35px;
+  border-radius: 5px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 60px solid #000;
+}
